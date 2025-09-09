@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aberra Agency</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="header-content">
+        <img
+          src="image/logo_light2.jpg"
+          alt="Aberra Agency Logo"
+          class="logo"
+        />
+        <div>
+          <h1>Aberra Agency</h1>
+          <p>Empowering Talent. Protecting Identity. Maximizing Growth.</p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="site-nav">
+      <button
+        class="menu-toggle"
+        id="menu-toggle"
+        aria-label="Toggle menu"
+        aria-expanded="false"
+        aria-controls="nav-links"
+      >
+        ☰
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">Who We Are</a>
+        <a href="#services">What We Do</a>
+        <a href="#benefits">Benefits</a>
+        <a href="#why">Why Us</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+
+    <!-- Who We Are -->
+    <section id="about" class="about">
+      <h2>Who We Are</h2>
+      <div class="about-content">
+        <img
+          src="image/about.png"
+          alt="Aberra Agency Team"
+          class="about-img"
+        />
+        <div class="about-text">
+          <p>
+            Aberra Agency is an international talent management agency
+            specializing in lifestyle, modeling, and digital content. We work
+            with creators across the globe, offering personalized strategies
+            that match their vision and goals.
+          </p>
+          <p>
+            Our mission is to provide end-to-end support so creators can focus
+            on what they do best: creating. From brand partnerships to digital
+            growth, we ensure that every talent has the tools and guidance
+            needed to succeed.
+          </p>
+          <p>
+            Most importantly, we prioritize privacy and security. By
+            safeguarding identity and offering professional management, we
+            empower creators to grow with confidence in a safe and supportive
+            environment.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services" class="services">
+      <h2>What We Do</h2>
+      <div class="services-list">
+        <div class="service"><h3>Social Media Management</h3></div>
+        <div class="service"><h3>Marketing & Branding</h3></div>
+        <div class="service"><h3>Platform Monetization</h3></div>
+        <div class="service"><h3>Privacy & Security</h3></div>
+        <div class="service"><h3>Analytics & Growth Strategy</h3></div>
+        <div class="service"><h3>Content Scheduling & Editing</h3></div>
+        <div class="service"><h3>Community Management</h3></div>
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits" class="benefits">
+      <h2>Talent Benefits</h2>
+      <div class="benefits-list">
+        <div class="benefit">
+          100% privacy — your identity will not be revealed
+        </div>
+        <div class="benefit">Transparent reporting and earnings tracking</div>
+        <div class="benefit">
+          Zero risk — our team ensures growth and stability
+        </div>
+        <div class="benefit">
+          Professional guidance and international exposure
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Work With Us -->
+    <section id="why" class="why">
+      <h2>Why Work With Us</h2>
+      <div class="why-content">
+        <img
+          src="image/why.png"
+          alt="Professional Team Collaboration"
+          class="why-img"
+        />
+        <div class="why-text">
+          <p>
+            Our international team of experts in marketing, branding, and
+            digital growth brings years of experience across multiple
+            industries. We have developed proven systems designed to maximize
+            revenue while adapting to the fast-changing digital landscape.
+          </p>
+          <p>
+            By choosing Aberra Agency, you are choosing a partner that takes
+            care of everything from A to Z. From strategy to execution, we
+            handle the details so you can focus entirely on what matters most:
+            creating impactful content that connects with your audience.
+          </p>
+          <p>
+            Most importantly, we believe in building long-term success. Our
+            approach is safe, secure, and professional — ensuring that your
+            growth is not only rapid but also sustainable and stable for the
+            future.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+      <h2>Contact Us</h2>
+      <p>Email: <a href="mailto:info@Aberra.com">info@Aberra.com</a></p>
+      <p>Phone: +123 456 7890</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Aberra Agency. All rights reserved.</p>
+    </footer>
+    <script>
+      (function () {
+        const toggle = document.getElementById("menu-toggle");
+        const navLinks = document.getElementById("nav-links");
+
+        // Open/close on hamburger
+        toggle.addEventListener("click", () => {
+          const isOpen = navLinks.classList.toggle("active");
+          toggle.setAttribute("aria-expanded", String(isOpen));
+        });
+
+        // Close after clicking any link
+        navLinks.addEventListener("click", (e) => {
+          if (e.target.tagName === "A") {
+            navLinks.classList.remove("active");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+          const clickedInside =
+            e.target === toggle || navLinks.contains(e.target);
+          if (!clickedInside) {
+            navLinks.classList.remove("active");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+
+        // Optional: close on ESC key
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape") {
+            navLinks.classList.remove("active");
+            toggle.setAttribute("aria-expanded", "false");
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
