@@ -1,0 +1,83 @@
+<!Doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Services — Aberra Agency</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+</head>
+<body>
+  <!-- header nav same pattern -->
+  <header class="site-header container">
+    <div class="brand">
+      <img src="images/logo_light2.jpg" alt="Aberra logo" class="brand-logo">
+      <div class="brand-text">
+        <div class="brand-name">Aberra Agency</div>
+        <div class="brand-tag">Empowering Talent • Private • Global</div>
+      </div>
+    </div>
+    <button id="menu-toggle-3" class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <nav class="nav" id="nav-3">
+      <a href="index.html">Home</a>
+      <a href="about.html">Who We Are</a>
+      <a href="services.html" class="active">Services</a>
+      <a href="benefits.html">Benefits</a>
+      <a href="why.html">Why Us</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="simple-hero">
+    <div class="container">
+      <h1>What We Do</h1>
+      <p>End-to-end services to grow creators and manage identity securely.</p>
+    </div>
+  </section>
+
+  <main class="container services-grid">
+    <div class="service-card">
+      <h3>Social Media Management</h3>
+      <p>Full content scheduling and audience growth strategies.</p>
+    </div>
+    <div class="service-card">
+      <h3>Marketing & Branding</h3>
+      <p>Branding, pitch decks, and campaign management.</p>
+    </div>
+    <div class="service-card">
+      <h3>Platform Monetization</h3>
+      <p>Monetization strategy across platforms, including performance tracking.</p>
+    </div>
+    <div class="service-card">
+      <h3>Privacy & Security</h3>
+      <p>Identity protection, secure payments, and compliance.</p>
+    </div>
+    <div class="service-card">
+      <h3>Analytics & Growth</h3>
+      <p>Data-driven growth with clear reporting.</p>
+    </div>
+    <div class="service-card">
+      <h3>Community Management</h3>
+      <p>Moderation and community development.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Aberra Agency • All rights reserved</p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const btn = document.getElementById('menu-toggle-3');
+      const nav = document.getElementById('nav-3');
+      btn.addEventListener('click', () => {
+        const open = nav.classList.toggle('open'); btn.setAttribute('aria-expanded', String(open));
+      });
+      nav.addEventListener('click', (e) => { if (e.target.tagName === 'A') { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+      document.addEventListener('click', (e) => { if (!nav.contains(e.target) && !btn.contains(e.target)) { nav.classList.remove('open'); btn.setAttribute('aria-expanded', 'false'); } });
+    })();
+  </script>
+</body>
+</html>
