@@ -15,8 +15,7 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: "Inter", "Helvetica Neue", Arial, sans-serif;
-  background: linear-gradient(135deg, #8e2de2, #4a00e0); /* purple gradient */
-  /* color: #fff; ensures text contrast */
+  background: lightgrey;
   -webkit-font-smoothing:antialiased;
   -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
