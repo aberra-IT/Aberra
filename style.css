@@ -265,7 +265,7 @@ a.btn:hover {
   box-shadow: 0 24px 50px rgba(20,20,30,0.06);
 }
 .page-hero-content h1{font-size:2rem;margin-bottom:8px}
-
+.page-hero-content p{color:white}
 
 /* services grid */
 .services-grid{
